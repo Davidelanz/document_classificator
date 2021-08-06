@@ -1,0 +1,16 @@
+name: document-classificator
+channels:
+  - anaconda
+  - pytorch
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pip
+  - ipython
+  - jupyterlab
+  - matplotlib
+  - numpy
+  - pandas
+  - pytorch=1.9.0
+  - torchvision=0.10.0
+  - cpuonly 
