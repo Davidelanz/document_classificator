@@ -52,7 +52,7 @@ The model is trained using Cross-entropy Loss as a loss function, SGD optimizer,
 
 While in ``data_preparation.ipynb`` is extensively documented the data processing pipeline, the actual training results are made available in the ``text_classification.ipynb`` notebook. 
 
-With a learning rate of 5 and a batch size of 8, the model reached its best fit at the end of epoch 10:
+With a learning rate of 5 and a batch size of 8, the model reached its best fit at the end of epoch 17:
 - training accuracy 100.0%
 - validation accuracy of 90.0%
 - test accuracy of 75.0%
