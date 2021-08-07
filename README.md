@@ -27,7 +27,7 @@ The model is trained on a small toy dataset based on the [RVL-CDIP Dataset](http
 
 ## Install
 
-The code comes with a ready-to-use conda enviroment:
+The code comes with a ready-to-use conda environment:
 ```
 git clone https://github.com/Davidelanz/document_classificator
 cd document_classificator
@@ -44,14 +44,17 @@ The data preparation process (documented extensively in ``data_preparation.ipynb
 
 The model is quite simple. It is composed of a [nn.EmbeddingBag](https://pytorch.org/docs/stable/nn.html?highlight=embeddingbag#torch.nn.EmbeddingBag) layer plus a linear layer for the classification purpose. 
 
-The model is trained using Cross-entropy Loss as a loss function, a SGD optimizer and a classic StepLR scheduler (details in ``text_classification.ipynb``).
+The model is trained using Cross-entropy Loss as a loss function, SGD optimizer, and a classic StepLR scheduler (details in ``text_classification.ipynb``).
 
 ![](./flowchart.png)
 
 ## Results 
 
-While in ``data_preparation.ipynb`` is exesively documented the data processing pipeline, the actual training results are made available in the ``text_classification.ipynb`` notebook. 
+While in ``data_preparation.ipynb`` is extensively documented the data processing pipeline, the actual training results are made available in the ``text_classification.ipynb`` notebook. 
 
-With a learning rate of 5 and a batch size of 8, the model reached its best fit at the end of epoch 10, with a train accuracy 100.0%, a validation accuracy of 90.0% and a test accuracy of 75.0%:
+With a learning rate of 5 and a batch size of 8, the model reached its best fit at the end of epoch 10:
+- training accuracy 100.0%
+- validation accuracy of 90.0%
+- test accuracy of 75.0%
 
 ![](./results.png)
