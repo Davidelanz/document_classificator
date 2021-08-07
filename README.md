@@ -4,8 +4,6 @@
 
 # Document classificator
 
---- 
-
 - [Document classificator](#document-classificator)
   - [Install](#install)
   - [Architecture](#architecture)
