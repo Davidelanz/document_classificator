@@ -1,5 +1,4 @@
-import time
-from typing import Tuple
+from typing import Iterator, Tuple
 
 import numpy as np
 import pandas as pd
@@ -13,7 +12,7 @@ def yield_tokens(data_iter, tokenizer):
         yield tokenizer(text)
 
 
-def get_vocab(text_iterator):
+def get_vocab(text_iterator: Iterator) -> torchtext.vocab.Vocab:
     tokenizer = torchtext.data.utils.get_tokenizer('basic_english')
     vocab = torchtext.vocab.build_vocab_from_iterator(
         yield_tokens(text_iterator, tokenizer), specials=["<unk>"])
@@ -59,7 +58,7 @@ def train(model: torch.nn,
           criterion,
           optimizer: torch.optim.Optimizer,
           epoch: int,
-          log_interval: int = 500):
+          log_interval: int = 500) -> None:
     model.train()
     total_acc, total_count = 0, 0
     for idx, batch in enumerate(dataloader):
@@ -75,14 +74,14 @@ def train(model: torch.nn,
         total_acc += (predited_label.argmax(1) == label).sum().item()
         total_count += label.size(0)
         if idx % log_interval == 0 and idx > 0:
-            print('| epoch {:3d} | {:5d}/{:5d} batches '
-                  '| accuracy {:8.3f}'.format(epoch, idx, len(dataloader),
-                                              total_acc/total_count))
+            print(f'| epoch {epoch:3d} '
+                  + f'| {idx:5d}/{len(dataloader):5d} batches '
+                  + f'| accuracy {total_acc/total_count:8.3f}')
             total_acc, total_count = 0, 0
 
 
 def evaluate(model: torch.nn,
-             dataloader: torch.utils.data.DataLoader):
+             dataloader: torch.utils.data.DataLoader) -> float:
     model.eval()
     total_acc, total_count = 0, 0
 
