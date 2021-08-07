@@ -16,8 +16,7 @@
 
 ---
 
-In this repository, I built a classifier that takes a document image and/or text and
-predicts a certain class. 
+In this repository, I built a Pytorch classifier for text documents.
 
 The model is trained on a small toy dataset based on the [RVL-CDIP Dataset](http://www.cs.cmu.edu/~aharley/rvl-cdip/). The dataset contains 100 documents of 4 classes: 
 - “resumee”,
