@@ -1,7 +1,7 @@
-[![](https://img.shields.io/badge/Python-3.8-yellow)]()
-[![](https://img.shields.io/badge/Conda-yes-green)]()
-[![](https://img.shields.io/badge/PyTorch-1.9-red)]()
-[![](https://img.shields.io/badge/TorchText-0.10.0-red)]()
+[![](https://img.shields.io/badge/Python-3.8-yellow)](#)
+[![](https://img.shields.io/badge/Conda-yes-green)](#)
+[![](https://img.shields.io/badge/PyTorch-1.9-red)](#)
+[![](https://img.shields.io/badge/TorchText-0.10.0-red)](#)
 
 # Document classificator
 
